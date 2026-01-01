@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  cowrie:
+    image: cowrie/cowrie
+    ports:
+      - "2222:2222"
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+  ml:
+    build: ./ml
+  collector:
+    build: ./collector
